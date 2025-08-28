@@ -20,29 +20,27 @@ for (const heart of hearts) {
 
 
 
-const cardbtns = document.getElementsByClassName('card-btn');
-
-let count=100;
+const cardbtns = document.getElementsByClassName('card-btn');  
  for (const cardbtn of cardbtns) {
     cardbtn.addEventListener('click', ()=>{
+     
+    const decreats = Number( document.getElementById('decreat').innerText) ;
+      
+         const locetion = cardbtn.parentNode.parentNode.children[1].children[0].innerText;
+        const phoneNumber = cardbtn.parentNode.parentNode.children[2].children[0].innerText;
+    if(decreats < 20 || decreats === 0){
+        alert('❌ Not enough coins. you need at least 20 coins');
+        return;
+    }
+    else{
+        alert(`📞 Calling ${locetion} ${phoneNumber}`);
 
+    }
+   const newDecreat = decreats-20;
 
-  count-=20;
-    const decreat = document.getElementById('decreat');
-    decreat.textContent=count;
+   document.getElementById('decreat').innerText=newDecreat;
 
     let date = new Date();
-
-  if(count>0){
-    alert(`${count-=0}`);
-  }
-  if(count<0){
-    alert(`stop ${count=0}`)
-  }
-
-       const locetion = cardbtn.parentNode.parentNode.children[1].children[0].innerText;
-        const phoneNumber = cardbtn.parentNode.parentNode.children[2].children[0].innerText;
-        console.log(phoneNumber);
         
         const cardContainer = document.getElementById('call-history-card')
         
@@ -62,10 +60,27 @@ let count=100;
     })
  }
 
+
 document.getElementById('btn-clear').addEventListener('click', ()=>{
      const cardContainer = document.getElementById('call-history-card');
      cardContainer.innerHTML = '';
 })
 
+const copybtns = document.getElementsByClassName('copy-btn')
+let count = 1;
+ for (const copybtn of copybtns) {
+    copybtn.addEventListener('click', ()=>{
+     const copyDisplay = document.getElementById('copy-add');
+       copyDisplay.innerText= count++;
+        const number = copybtn.parentNode.parentNode.children[2].children[0].innerText;
+        navigator.clipboard.writeText(number)
 
- 
+        .then(()=>{
+            alert(` Number copied succesfully! ${number}`);
+        })
+        .catch(err=>{
+            console.error('Copy failed:', err);
+        });
+      
+    })
+ }
