@@ -33,7 +33,8 @@ const cardbtns = document.getElementsByClassName('card-btn');
         return;
     }
     else{
-        alert(`📞 Calling ${locetion} ${phoneNumber}`);
+        alert(`📞 Calling... 
+       ${locetion} ${phoneNumber}`);
 
     }
    const newDecreat = decreats-20;
