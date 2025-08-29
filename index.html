@@ -14,12 +14,12 @@
 <body>
     <div class="w-11/12 mx-auto">
         <!-- navber section -->
-        <div class="flex justify-between items-center">
-        <div class="flex justify-center items-center gap-3">
-            <img class="w-14" src="./assets/logo.png" alt="">
-            <h1 class="text-[#006747] font-bold text-2xl">Emergency <br> Service</h1>
+        <div class="flex justify-between items-center ">
+        <div class="flex justify-center items-center md:gap-3">
+            <img class="w-10 md:w-14" src="./assets/logo.png" alt="">
+            <h1 class="text-[#006747] font-bold md:text-2xl">Emergency <br> Service</h1>
         </div>
-        <div class="flex gap-5 ">
+        <div class="flex md:gap-5 ">
             
                 <div class="flex gap-1 bg-[#41FF6B1A] py-3 rounded-3xl px-6 hover:bg-stone-400">
                     <h1 id="add">0</h1>
@@ -30,7 +30,7 @@
                      <h1 id="decreat">100</h1>
                     <img class="w-4" src="./assets/coin.png" alt="">
                 </div>
-                <div class="flex gap-2 bg-[#00A63E] py-3 px-6 rounded-3xl text-white hover:bg-stone-400">
+                <div class="flex gap-2 bg-[#00A63E] py-3 px-2 md:px-6 rounded-3xl text-white hover:bg-stone-400">
                     <h1 id="copy-add">0</h1>
                     <p>Copy</p>
                 </div>
@@ -51,8 +51,8 @@
        </div>
 
       <!-- card section -->
-        <div class="main w-11/12 mx-auto mt-10 grid grid-cols-12 gap-8 ">
-        <div class="col-span-9  ">
+        <div class="main w-11/12 mx-auto mt-10 flex flex-col-reverse md:flex-row gap-5 ">
+       
           
            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 ">
 
@@ -281,17 +281,17 @@
             </div>
             </div>
            </div>     
-        </div>
-
+        
         <!-- card sec -->
-        <div  class=" md:col-span-3 shadow-sm bg-white rounded-md p-5 space-y-5">
-             <div class="flex justify-between p-3">
+        <div  class=" shadow-sm bg-white rounded-md p-3 space-y-5">
+             <div class="flex justify-between p-1 gap-8 ">
               <h1 class="font-bold"><span class="text-gray-400">🕒</span> Call history</h1>
-            <button id="btn-clear" class="bg-[#00A63E] py-2 px-6 rounded-2xl text-white hover:bg-stone-400">Clear</button>
+            <button id="btn-clear" class="bg-[#00A63E] py-2 px-4 rounded-2xl text-white hover:bg-stone-400">Clear</button>
           </div>
           <div id="call-history-card">
           </div>
           </div>
+
        </div>
     </div>
     </div>
